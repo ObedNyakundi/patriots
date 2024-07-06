@@ -6,7 +6,7 @@
 				      <div class="collapse navbar-collapse text-center" id="navbarNav">
 				        <ul class="navbar-nav text-center">
 				          <li class="nav-item">
-				            <a class="nav-link" aria-current="page" href="#"> 
+				            <a class="nav-link" aria-current="page" href="{{ route('patriot') }}"> 
 				            	<i class="fa fa-home"></i>	Public Board
 				        	</a>
 				          </li>
@@ -19,6 +19,7 @@
 				              <i class="fa fa-id-badge"></i> Lists
 				            </a>
 				            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+				              <li><a class="dropdown-item" href="{{ route('patriot.create') }}">Add a Patriot</a></li>
 				              <li><a class="dropdown-item" href="#">List of Fame</a></li>
 				              <li><a class="dropdown-item" href="#">List of Shame</a></li>
 				            </ul>
@@ -50,7 +51,7 @@
 
 				              	<a class="dropdown-item" href="{{ route('logout') }}" 
 				              	onclick="event.preventDefault();
-                                                this.closest('form').submit();"
+                                 this.closest('form').submit();"
 				              	>Sign out</a>
 
 				        </form>

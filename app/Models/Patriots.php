@@ -16,6 +16,10 @@ class Patriots extends Model
       'image',
       'added_by',
       'approved_by',
+      'date_of_death',
+      'cause_of_death',
+      'gender',
+      'place_of_death'
     ];
 
     //a patriot can have many euologies
