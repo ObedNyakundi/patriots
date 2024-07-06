@@ -1,0 +1,121 @@
+/*******************************************************************
+ *
+ *   Copyright (C) 2024, Kenyan Patriots 
+ *   Designed and developed by Obed Nyakundi
+ *   In honor of Rex Masai & other patriots.  
+ * 	 All Rights Reserved.
+ *
+ ********************************************************************/
+   .main-container
+   	{
+		width: 100%;
+		height: 100%;
+		background:#000; 
+		background-image: linear-gradient(to right, #36454F, #808080,#1B1212,white,red,white,green,#808080,#36454F);
+		padding-top: 6rem;
+		padding-bottom:1rem;
+	}
+	.content-area{
+		background:white;
+		padding:1.5rem;
+		border-radius: 1.5rem;
+		min-height:700px;
+			}
+	.waving-flag{
+		position: absolute;
+		top: 15rem;
+		left: 0;
+		width:8rem;
+		height: auto;
+	}
+
+	.flowers{
+		position: fixed;
+		top: -2.5rem;
+		right: 0;
+		width:15rem;
+		height: auto;
+	}
+
+	.text-white{
+		color: white !important;
+	}
+	.text-black{
+		color: #1B1212 !important;
+	}
+	.text-center{
+		text-align: center;
+	}
+	.absolute-center {
+		position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+	}
+	#preloader{
+		z-index: 999;
+		width:4rem;
+		height: 4rem;
+		background: url('../assets/preloader.gif');
+		background-size: 4rem 4rem;
+	}
+	.pat-label{
+		font-weight: 400;
+	}
+	.pat-value{
+		font-weight: 600;
+		font-size: 1.5rem;
+		font-family: cursive;
+		text-decoration: underline #1B1212 1px dotted;
+	}
+
+	.pat-card{
+		margin-bottom: 1.5rem;	
+	}
+	.bolden{
+		font-weight:650;
+	}
+	.legend-caption{
+		text-align: center;
+		margin-top: -5rem;
+		margin-bottom: 2rem;
+	}
+	.menu-div{
+		width:50%;
+		margin-left: auto;	
+		margin-right: auto;
+		text-align: center;
+	}
+	.legend-head{
+	text-shadow: 2px 2px 8px black, 0 0 1em black, 0 0 0.2em black;	
+	}
+	.patriot-image{
+	max-width: 100%;
+	height: auto;	
+	}
+
+	.details-section{
+		padding-left:1em;	
+	}
+	.pat-buttons{
+		border-top: 1px dashed #1B1212;
+		padding-top: 0.3rem;
+	}
+	.pat-buttons > button{
+		width: 100%;
+		margin-bottom: 0.2rem;
+	}
+
+	@media screen and (max-width: 700px) 
+	{
+	  /* hide flower and flag on mobile devices */
+	  .waving-flag {
+	    display: none;
+	  }
+	  .flowers {
+		  display:none;
+	  }
+	}
+

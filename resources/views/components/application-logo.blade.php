@@ -1,0 +1,1 @@
+<img src="{{ asset('/assets/favicon.png') }}" alt="Shield">
