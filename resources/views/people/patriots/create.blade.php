@@ -15,18 +15,43 @@
                     @csrf
                     @method('POST')
 
+
                        <div class="mb-6">
                         <div class="text-center"> <h3><i class="fa fa-user"></i> Add a Patriot</h3> </div>
-                        <label for="image">Select Image*:</label>
+                        <label for="image">Select Image (less than 2MB)*:</label>
                         <input type="file" required value="" placeholder="e.g Rex Masai" class="form-control" name="image" id="image"> <br>
+                        @error('image')
+                    	<div class="alert alert-danger">{{ $message }}</div>
+                    	@enderror
+
                         <label for="name">Name*:</label>
                         <input type="text" required value="" placeholder="e.g Rex Masai" class="form-control" name="name" id="name"> <br>
+
+                        <label for="gender">Gender*:</label>
+                        <select name="gender" id="gender" required class="form-control">
+                        <option value="">Select Gender</option> 
+                        <option value="male">Male</option> 
+                        <option value="female">Female</option>
+                        </select>
+                        <br>
+
+                        <label for="pob">Place of Birth*:</label>
+                        <input type="text" required value="" placeholder="e.g Machakos Town" class="form-control" name="place_of_birth" id="pob"> <br>
 
                         <label for="dob">Date of Birth*:</label>
                         <input type="date" required value="" placeholder="Pick Date" class="form-control" name="date_of_birth" id="dob"> <br>
 
+                        <label for="pod">Place of Death*:</label>
+                        <input type="text" required value="" placeholder="e.g Nairobi" class="form-control" name="place_of_death" id="pod"> <br>
+
+                        <label for="dod">Date of Death*:</label>
+                        <input type="date" required value="" placeholder="Pick Date" class="form-control" name="date_of_death" id="dod"> <br>
+
+                        <label for="cod">Cause of Death*:</label>
+                        <input type="text" required value="" placeholder="e.g Gunshot by ugly Ndumba" class="form-control" name="cause_of_death" id="cod"> <br>
+
                         <button type="submit" class="btn w3-black w3-round w3-round-xxlarge w3-hover-orange">
-                            ADD  <i class="fa fa-save"></i>
+                            Submit for Approval  <i class="fa fa-save"></i>
                         </button>
                        </div>
                    </form>

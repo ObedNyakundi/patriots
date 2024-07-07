@@ -13,6 +13,7 @@ class Patriots extends Model
     protected $fillable = [
       'name',  
       'date_of_birth',
+      'place_of_birth',
       'image',
       'added_by',
       'approved_by',
