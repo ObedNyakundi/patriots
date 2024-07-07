@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
 
     //index page
     Route::get('/', [HomeController::class,'index']) ->name('patriot');
+    Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
 });

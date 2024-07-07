@@ -6,10 +6,9 @@
 
 @section('content-section')
 		<div class="row ">
-			<!-- use this section to display the patriots -->		
+			<!-- use this section to display the patriots -->
 
-		@foreach($patriots as $patriot)
-			<div class="col-md-4 col-sm-6 col-xs-12 pat-card">
+			<div class="col-md-12 col-sm-12 col-xs-12 pat-card relative-center" style="max-width:500px">
 				 <div class="w3-card-4">
 				  <img src="{{ asset('/uploads/patriots/'.$patriot->image) }}" alt="Rex Masai" class="patriot-image">
 				  <div class="w3-container w3-center">
@@ -25,23 +24,11 @@
 				  </div>
 				  <div class="w3-container w3-center pat-buttons">
 				  	<button class="w3-round w3-round-xxlarge w3-button w3-blue w3-hover-aqua"
-				  	onclick="location.href='{{ route('patriot.show',$patriot->id) }}'">
-				  		Read Bio <i class="fa fa-eye"></i></button>
-
-				  		<!-- Allow direct edit to the one who added the info -->
-				  		@if($patriot->user->name == Auth::user()->name)
-  					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
-  						Edit Profile <i class="fa fa-edit"></i></button>
-  						@else
-  					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
-  						Suggest Edition <i class="fa fa-edit"></i></button>
-  						@endif
-  					<button class="w3-round w3-round-xxlarge w3-button w3-orange w3-hover-aqua">
-  						Give my flower <i class="fa fa-tree"></i></button>
+				  	onclick="location.href='{{ route('patriot',$patriot->id) }}'">
+				  		Back <i class="fa fa-eye"></i></button>
 				  </div>
 				</div> 
 			</div>
-		@endforeach
-
-	</div>
+			
+		</div>
 @endsection

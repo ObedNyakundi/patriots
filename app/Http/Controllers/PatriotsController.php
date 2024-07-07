@@ -89,15 +89,17 @@ class PatriotsController extends Controller
           'approved_by'=>Auth::user()->id,
         ]);
 
-         return redirect()->route('dashboard');
+         //redirect to specific profile
+         return view('people.patriots.show',['patriot'=>Patriots::latest()->first()]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Patriots $patriots)
+    public function show($patriots_id)
     {
-        //
+        $patriot=Patriots::find($patriots_id);
+        return view('people.patriots.show',compact('patriot'));
     }
 
     /**

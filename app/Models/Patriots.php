@@ -23,6 +23,11 @@ class Patriots extends Model
       'place_of_death'
     ];
 
+    //a patriot was added by a user
+    public function user(){
+        return $this->belongsTo(User::class, 'added_by');
+    }
+
     //a patriot can have many euologies
     public function euology(){
         return $this->hasMany(Euology::class);
