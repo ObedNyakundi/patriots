@@ -2,20 +2,17 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PatriotsController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('people.index');
-});
+Route::get('/', [HomeController::class,'index']);
 
 //my routes for users that are not logged in
 Route::middleware('guest')->group(function () {
-    Route::view('/patriot','people.index') ->name('patriot');  //index page
+    Route::get('/', [HomeController::class,'index']) ->name('patriot');  //index page
 });
 
-Route::get('/dashboard', function () {
-    return view('people.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //routes for logged in users
 Route::middleware('auth')->group(function () {
@@ -24,7 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //index page
-    Route::view('/patriot','people.index') ->name('patriot');
+    Route::get('/', [HomeController::class,'index']) ->name('patriot');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
 });

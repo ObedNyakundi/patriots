@@ -77,7 +77,7 @@ class PatriotsController extends Controller
 
         //attempt insertion
          Patriots::create([
-          'name'=>$request->input('name'),  
+          'name'=>ucwords($request->input('name')),  
           'date_of_birth'=>$request->input('date_of_birth'),
           'place_of_birth'=>$request->input('place_of_birth'),
           'date_of_death'=>$request->input('date_of_death'),
@@ -88,9 +88,6 @@ class PatriotsController extends Controller
           'added_by'=>Auth::user()->id,
           'approved_by'=>Auth::user()->id,
         ]);
-
-
-        //dd($request->all());
 
          return redirect()->route('dashboard');
     }
