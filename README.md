@@ -42,7 +42,7 @@ Developed with Laravel 11
 ![Landing Page](./gallery/landing_page.png)
 
 ## A patriot's page
-![Patriot Page](./gallery/landing_page.png)
+![Patriot Page](./gallery/patriot.png)
 
 ## A page for adding our patriots
 ![Patriot adding form](./gallery/addform.png)
