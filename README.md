@@ -39,13 +39,13 @@ Developed with Laravel 11
 # Gallery designs
 
 ## Here's the landing page
-![Landing Page](./landing_page.png)
+![Landing Page](./gallery/landing_page.png)
 
 ## A patriot's page
-![Patriot Page](./landing_page.png)
+![Patriot Page](./gallery/landing_page.png)
 
 ## A page for adding our patriots
-![Patriot adding form](./addform.png)
+![Patriot adding form](./gallery/addform.png)
 
 # Final Appeal
 A lot of care has been undertaken to keep this app's stability and efficiency. Please feel free to fork it and improve it as you will deem fit.
