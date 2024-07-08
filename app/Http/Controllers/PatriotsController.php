@@ -90,7 +90,7 @@ class PatriotsController extends Controller
         ]);
 
          //redirect to specific profile
-         return view('people.patriots.show',['patriot'=>Patriots::latest()->first()]);
+         return redirect()-> view('people.patriots.show',['patriot'=>Patriots::latest()->first()]);
     }
 
     /**
@@ -98,7 +98,7 @@ class PatriotsController extends Controller
      */
     public function show($patriots_id)
     {
-        $patriot=Patriots::find($patriots_id);
+        $patriot=Patriots::findorfail($patriots_id);
         return view('people.patriots.show',compact('patriot'));
     }
 

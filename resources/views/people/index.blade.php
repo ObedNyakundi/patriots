@@ -29,7 +29,7 @@
 				  		Read Bio <i class="fa fa-eye"></i></button>
 
 				  		<!-- Allow direct edit to the one who added the info -->
-				  		@if($patriot->user->name == Auth::user()->name)
+				  		@if((Auth::check()) && ($patriot->user->name == Auth::user()->name))
   					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
   						Edit Profile <i class="fa fa-edit"></i></button>
   						@else
