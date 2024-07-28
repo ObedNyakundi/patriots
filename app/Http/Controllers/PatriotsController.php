@@ -125,4 +125,14 @@ class PatriotsController extends Controller
     {
         //
     }
+
+     /**
+     * Approve a patriot function for the admin.
+     */
+    public function approve($patriots_id)
+    {
+        Patriots::where('id',$patriots_id) -> update(['is_approved'=>1]);
+        
+        return redirect() ->route('dashboard');
+    }
 }

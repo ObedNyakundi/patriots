@@ -32,6 +32,8 @@ Route::middleware('auth')->group(function () {
 
 //route for logged in users who are Admins
 Route::middleware('is_admin')->group(function () {
+    //approve a patriot
+    Route::get('/patriot/approve/{patriot_id}',[PatriotsController::class,'approve']) ->name('patriot.approve');
 
     });
 
