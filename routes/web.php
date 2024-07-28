@@ -5,11 +5,12 @@ use App\Http\Controllers\PatriotsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class,'index']);
+//the default index
+Route::get('/', [HomeController::class,'index']) ->name('home');
 
 //my routes for users that are not logged in
 Route::middleware('guest')->group(function () {
-    Route::get('/', [HomeController::class,'index']) ->name('patriot');  //index page
+    Route::get('/patriots', [HomeController::class,'index']) ->name('patriot');  //index page
 });
 
 Route::get('/dashboard', [HomeController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -21,7 +22,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //index page
-    Route::get('/', [HomeController::class,'index']) ->name('patriot');
     Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
@@ -31,5 +31,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware('is_admin')->group(function () {
 
     });
+
+
 
 require __DIR__.'/auth.php';
