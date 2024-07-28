@@ -17,7 +17,7 @@
 		<!-- display this section on the Admin page to approve added patriots -->	
 		@foreach($pendingpatriots as $patriot)
 			<div class="col-md-4 col-sm-6 col-xs-12 pat-card">
-				 <div class="w3-card-4 w3-sand">
+				 <div class="w3-card-4 w3-pale-green">
 				  <img src="{{ asset('/uploads/patriots/'.$patriot->image) }}" alt="Rex Masai" class="patriot-image">
 				  <div class="w3-container w3-center">
 				  	<h5 class="bolden">{{ $patriot->name }}</h5>
