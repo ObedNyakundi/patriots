@@ -6,7 +6,7 @@
 				      <div class="collapse navbar-collapse text-center" id="navbarNav">
 				        <ul class="navbar-nav text-center">
 				          <li class="nav-item">
-				            <a class="nav-link" aria-current="page" href="{{ route('patriot') }}"> 
+				            <a class="nav-link" aria-current="page" href="{{ route('dashboard') }}"> 
 				            	<i class="fa fa-home"></i>	Public Board
 				        	</a>
 				          </li>

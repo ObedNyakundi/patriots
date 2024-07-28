@@ -6,17 +6,20 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 //the default index
-Route::get('/', [HomeController::class,'index']) ->name('home');
+
 
 //my routes for users that are not logged in
 Route::middleware('guest')->group(function () {
-    Route::get('/patriots', [HomeController::class,'index']) ->name('patriot');  //index page
+    Route::get('/', [HomeController::class,'index']) ->name('home');
 });
 
-Route::get('/dashboard', [HomeController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //routes for logged in users
 Route::middleware('auth')->group(function () {
+    //dashboard
+    Route::get('/patriots', [HomeController::class,'patriots']) ->name('dashboard');
+
+    //profile edits
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

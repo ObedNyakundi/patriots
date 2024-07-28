@@ -90,7 +90,7 @@ class PatriotsController extends Controller
         ]);
 
          //redirect to specific profile
-         return redirect()-> view('people.patriots.show',['patriot'=>Patriots::latest()->first()]);
+         return redirect()-> route('patriot.show',[Patriots::latest()->first()]);
     }
 
     /**

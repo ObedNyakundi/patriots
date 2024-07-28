@@ -24,7 +24,7 @@
 				  </div>
 				  <div class="w3-container w3-center pat-buttons">
 				  	<button class="w3-round w3-round-xxlarge w3-button w3-blue w3-hover-aqua"
-				  	onclick="location.href='{{ route('patriot',$patriot->id) }}'">
+				  	onclick="location.href='{{ route('dashboard') }}'">
 				  		Back <i class="fa fa-eye"></i></button>
 				  </div>
 				</div> 

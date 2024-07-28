@@ -16,4 +16,13 @@ class HomeController extends Controller
        
         return view('people.landing', compact('patriots'));
     }
+
+     public function patriots()
+    {
+       
+        $patriots = Patriots::where('is_approved', 1)->latest()->get();
+        $pendingpatriots = Patriots::where('is_approved', 0)->latest()->get();
+       
+        return view('people.index', compact('patriots','pendingpatriots'));
+    }
 }

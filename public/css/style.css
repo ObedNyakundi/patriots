@@ -116,6 +116,14 @@
 		width: 100%;
 		margin-bottom: 0.2rem;
 	}
+	.panel-head{
+		border-top: 1px solid black;
+		text-align: center;
+		margin-bottom: 1.2em;
+	}
+	.section-heading{
+		font-family: inherit;
+	}
 
 	@media screen and (max-width: 700px) 
 	{
