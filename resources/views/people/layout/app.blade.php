@@ -16,7 +16,7 @@
 	
 	<!-- page legend -->
 	<div class="legend-caption">
-	<h1 class="text-white legend-head">The Patriots Galery</h1>
+	<h1 class="text-white legend-head">The Patriots Gallery</h1>
 	</div>
 
 	<!-- body content -->

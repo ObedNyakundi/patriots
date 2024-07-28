@@ -105,9 +105,13 @@ class PatriotsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Patriots $patriots)
+    public function edit($patriots_id)
     {
-        //
+        $patriot=Patriots::findorfail($patriots_id);
+
+        //dd($patriot);
+
+        return view('people.patriots.edit',compact('patriot'));
     }
 
     /**

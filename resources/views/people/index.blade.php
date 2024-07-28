@@ -69,7 +69,8 @@
 
 				  		<!-- Allow direct edit to the one who added the info -->
 				  		@if((Auth::check()) && ($patriot->user->name == Auth::user()->name))
-  					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
+  					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua"
+  					onclick="location.href='{{ route('patriot.edit',$patriot->id) }}'">
   						Edit Profile <i class="fa fa-edit"></i></button>
   						@else
   					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">

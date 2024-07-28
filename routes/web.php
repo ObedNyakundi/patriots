@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
+    Route::get('/patriot/edit/{patriot_id}',[PatriotsController::class,'edit']) ->name('patriot.edit');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
 });
