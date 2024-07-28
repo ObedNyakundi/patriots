@@ -12,8 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
     //display the default landing page
     Route::get('/', [HomeController::class,'index']) ->name('home');
-    //show a patriot
-    Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
+    
 });
 
 
@@ -27,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //show a patriot
+    Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
     Route::get('/patriot/edit/{patriot_id}',[PatriotsController::class,'edit']) ->name('patriot.edit');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
