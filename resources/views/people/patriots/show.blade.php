@@ -1,7 +1,7 @@
 @extends('people.layout.app')
 
 @section('page-title')
-: Home
+: {{ $patriot->name }}
 @endsection
 
 @section('content-section')

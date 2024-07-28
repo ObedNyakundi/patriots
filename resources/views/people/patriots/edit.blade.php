@@ -1,7 +1,7 @@
 @extends('people.layout.app')
 
 @section('page-title')
-: Add a Patriot
+: Edit
 @endsection
 
 @section('content-section')

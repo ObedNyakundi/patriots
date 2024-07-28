@@ -28,14 +28,10 @@
 				  	onclick="location.href='{{ route('patriot.show',$patriot->id) }}'">
 				  		Read Bio <i class="fa fa-eye"></i></button>
 
-				  		<!-- Allow direct edit to the one who added the info -->
-				  		@if((Auth::check()) && ($patriot->user->name == Auth::user()->name))
-  					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
-  						Edit Profile <i class="fa fa-edit"></i></button>
-  						@else
+				  		<!-- Allow anyone to reccomend changes -->
   					<button class="w3-round w3-round-xxlarge w3-button w3-green w3-hover-aqua">
   						Suggest Edition <i class="fa fa-edit"></i></button>
-  						@endif
+ 
   					<button class="w3-round w3-round-xxlarge w3-button w3-orange w3-hover-aqua">
   						Give my flower <i class="fa fa-tree"></i></button>
 				  </div>
