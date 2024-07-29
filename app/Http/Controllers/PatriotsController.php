@@ -108,9 +108,6 @@ class PatriotsController extends Controller
     public function edit($patriots_id)
     {
         $patriot=Patriots::findorfail($patriots_id);
-
-        //dd($patriot);
-
         return view('people.patriots.edit',compact('patriot'));
     }
 
@@ -119,7 +116,21 @@ class PatriotsController extends Controller
      */
     public function update(Request $request, Patriots $patriots)
     {
-        //
+
+        //attempt insertion
+         $patriots -> update([
+          'name'=>ucwords($request->input('name')),  
+          'date_of_birth' => $request->input('date_of_birth'),
+          'place_of_birth'=>$request->input('place_of_birth'),
+          'date_of_death'=>$request->input('date_of_death'),
+          'place_of_death'=>$request->input('place_of_death'),
+          'cause_of_death'=>$request->input('cause_of_death'),
+          'gender'=>$request->input('gender'),
+        ]);
+
+         dd($request);
+         //redirect to specific profile
+         return redirect()-> route('dashboard');
     }
 
     /**

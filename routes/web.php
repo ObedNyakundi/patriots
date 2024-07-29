@@ -21,14 +21,15 @@ Route::middleware('auth')->group(function () {
     //dashboard
     Route::get('/patriots', [HomeController::class,'patriots']) ->name('dashboard');
 
-    //profile edits
+    //profile routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    //show a patriot
-    Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
-    Route::get('/patriot/edit/{patriot_id}',[PatriotsController::class,'edit']) ->name('patriot.edit');
+    // patriot routes
+  Route::get('/patriot/show/{patriot_id}',[PatriotsController::class,'show']) ->name('patriot.show');
+  Route::get('/patriot/edit/{patriot_id}',[PatriotsController::class,'edit']) ->name('patriot.edit');
+  Route::patch('/patriot/update/{patriot_id}',[PatriotsController::class,'update']) ->name('patriot.update');
     Route::get('/patriot/create',[PatriotsController::class,'create']) ->name('patriot.create');
     Route::post('/patriot/store',[PatriotsController::class,'store']) ->name('patriot.store');
 });

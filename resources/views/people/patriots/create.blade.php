@@ -19,7 +19,7 @@
                        <div class="mb-6">
                         <div class="text-center"> <h3><i class="fa fa-user"></i> Add a Patriot</h3> </div>
                         <label for="image">Select Image (less than 2MB)*:</label>
-                        <input type="file" required value="" placeholder="e.g Rex Masai" class="form-control" name="image" id="image"> <br>
+                        <input type="file" required value="" placeholder="e.g Rex Masai" class="form-control" name="image" id="image" accept=".png, .jpg, .jpeg"> <br>
                         @error('image')
                     	<div class="alert alert-danger">{{ $message }}</div>
                     	@enderror

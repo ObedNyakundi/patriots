@@ -11,18 +11,16 @@
 			<div class="col-md-12 col-sm-12 col-xs-12 pat-card relative-center" 
 			style="max-width:600px;">
 				 <div class="w3-card-4" style="padding:1.2rem; border-radius: 20px;">
-				  <form method="post" action="{{ route('patriot.store') }}" enctype="multipart/form-data">
+				  <form method="post" action="{{ route('patriot.update',$patriot->id) }}" enctype="multipart/form-data">
                     @csrf
-                    @method('POST')
-
+                    @method('PATCH')
 
                        <div class="mb-6">
-                        <div class="text-center"> <h3><i class="fa fa-user"></i> Edit {{ $patriot->name }}</h3> </div>
-                        <label for="image">Select Image (less than 2MB)*:</label>
-                        <input type="file" required value="{{ $patriot ->image }}" placeholder="e.g Rex Masai" class="form-control" name="image" id="image"> <br>
-                        @error('image')
-                    	<div class="alert alert-danger">{{ $message }}</div>
-                    	@enderror
+                        <div class="text-center"> <h3><i class="fa fa-user"></i> {{ $patriot->name }}</h3> 
+                        </div>
+                        <div class="text-center">
+                           <img style="width:100px; height: auto;" src="{{ asset('/uploads/patriots/'.$patriot->image) }}">
+                        </div>
 
                         <label for="name">Name*:</label>
                         <input type="text" required placeholder="e.g Rex Masai" class="form-control" value="{{ $patriot ->name }}" name="name" id="name"> <br>
