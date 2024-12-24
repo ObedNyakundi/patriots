@@ -16,7 +16,7 @@
 
 		<!-- display this section on the Admin page to approve added patriots -->	
 		@foreach($pendingpatriots as $patriot)
-			<div class="col-md-4 col-sm-6 col-xs-12 pat-card">
+			<div class="col-md-3 col-sm-4 col-xs-6 pat-card">
 				 <div class="w3-card-4 w3-pale-green">
 				  <img src="{{ asset('/uploads/patriots/'.$patriot->image) }}" alt="Rex Masai" class="patriot-image">
 				  <div class="w3-container w3-center">
@@ -48,7 +48,7 @@
 			</div>
 		<!-- use this section to display the patriots -->		
 		@foreach($patriots as $patriot)
-			<div class="col-md-4 col-sm-6 col-xs-12 pat-card">
+			<div class="col-md-3 col-sm-4 col-xs-6 pat-card">
 				 <div class="w3-card-4">
 				  <img src="{{ asset('/uploads/patriots/'.$patriot->image) }}" alt="Rex Masai" class="patriot-image">
 				  <div class="w3-container w3-center">
